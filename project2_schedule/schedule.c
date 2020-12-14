@@ -86,9 +86,17 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 	schedInfo_t* schedPtr;
 	
 	//error handler
-
-	//allocate memory and set the member variables
+    if (schedPtr == NULL)
+    {
+    	printf("error\n");
+    	return -1;
+	}
 	
+	//allocate memory and set the member variables
+	schedPtr = (schedInfo_t*)malloc(100*sizeof(schedInfo_t));
+	
+	strcpy(schedPtr->name, name);
+	strcpy(schedPtr->place, place);
 	
 	return (void*)schedPtr;
 }
@@ -98,14 +106,19 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 //get month information from the scheduler info structure
 float sched_getMonth(void* obj)
 {
-	
+	if(schedPtr == NULL)
+	{
+		printf("error!\n");
+		return -1;
+	} 
+	return schedPtr->month;
 }
 
 
 //get type information from the scheduler info structure
 int sched_getType(void* obj)
 {
-	
+	return schedPtr->type;
 }
 
 
@@ -113,12 +126,12 @@ int sched_getType(void* obj)
 //get place string information from the scheduler info structure
 char* sched_getPlace(void* obj)
 {
-
+	return schedPtr->place;
 }
 
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
 {
-	
+	if(drama) 
 }
 
