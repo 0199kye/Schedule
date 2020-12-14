@@ -64,10 +64,16 @@ int main(int argc, char *argv[]) {
 	{
 		//3. menu printing
 		//fill code here ---- 
+		printf("1. print all the schedules\n");
+		printf("2. search for schedules in the month\n");
+		printf("3. search for schedules in the place\n");
+		printf("4. search for specific type schedule\n");
+		printf("5. exit\n");
 		
 		//4. get option from keyboard
 		//fill code here ----
-		
+		printf("select an option: \n");
+		scanf("%d", &option);
 		
 		switch(option)
 		{
@@ -82,6 +88,10 @@ int main(int argc, char *argv[]) {
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 					
 					//fill code this part - end
+					printf("---------------------------------------------\n");
+					
+					printf("---------------------------------------------\n");
+					
 				}
 				
 				break;
@@ -98,6 +108,10 @@ int main(int argc, char *argv[]) {
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 					
 					//fill code this part - end
+					printf("---------------------------------------------\n");
+					
+					printf("---------------------------------------------\n");
+					
 				}
 				
 				break;
@@ -114,6 +128,10 @@ int main(int argc, char *argv[]) {
 					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 					
 					//fill code this part - end
+					printf("---------------------------------------------\n");
+					
+					printf("---------------------------------------------\n");
+					
 				}
 				
 				break;
@@ -134,6 +152,10 @@ int main(int argc, char *argv[]) {
 						schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 						
 						//fill code this part - end
+						printf("---------------------------------------------\n");
+					
+					    printf("---------------------------------------------\n");
+					
 					}
 				}
 				else
