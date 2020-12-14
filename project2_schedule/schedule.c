@@ -106,11 +106,7 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 //get month information from the scheduler info structure
 float sched_getMonth(void* obj)
 {
-	if(schedPtr == NULL)
-	{
-		printf("error!\n");
-		return -1;
-	} 
+	schedInfo_t* schedPtr = (schedInfo_t*)obj;
 	return schedPtr->month;
 }
 
@@ -118,6 +114,7 @@ float sched_getMonth(void* obj)
 //get type information from the scheduler info structure
 int sched_getType(void* obj)
 {
+	schedInfo_t* schedPtr = (schedInfo_t*)obj;
 	return schedPtr->type;
 }
 
@@ -126,12 +123,49 @@ int sched_getType(void* obj)
 //get place string information from the scheduler info structure
 char* sched_getPlace(void* obj)
 {
+	schedInfo_t* schedPtr = (schedInfo_t*)obj;
 	return schedPtr->place;
 }
 
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
 {
-	if(drama) 
+	if(strcmp(typeName, "drama" == 0)
+	{
+		return 0;
+	} 
+	
+	 else if(strcmp(typeName, "movie" == 0)
+	 {
+	 	return 1;
+	 }
+	 
+	 else if(strcmp(typeName, "advertisement" == 0)
+	 {
+	 	return 2;
+	 }
+	 
+	 else if(strcmp(typeName, "entertainment" == 0)
+	 {
+	 	return 3;
+	 }
+	 
+	 else if(strcmp(typeName, "meeting" == 0)
+	 {
+	 	return 4;
+	 }
+	 
+	 else if(strcmp(typeName, "fitness" == 0)
+	 {
+	 	return 5;
+	 }
+	 
+	 else if(strcmp(typeName, "privacy" == 0)
+	 {
+	 	return 6;
+	 }
+	 
+	 else 
+	  return -1;
 }
 
