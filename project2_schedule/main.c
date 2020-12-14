@@ -89,7 +89,8 @@ int main(int argc, char *argv[]) {
 					
 					//fill code this part - end
 					printf("---------------------------------------------\n");
-					
+					sched_getMonth(schedInfo);
+					sched_print(schedInfo);
 					printf("---------------------------------------------\n");
 					
 				}
@@ -109,7 +110,8 @@ int main(int argc, char *argv[]) {
 					
 					//fill code this part - end
 					printf("---------------------------------------------\n");
-					
+					sched_getMonth(schedInfo);
+					sched_print(schedInfo);
 					printf("---------------------------------------------\n");
 					
 				}
@@ -129,7 +131,8 @@ int main(int argc, char *argv[]) {
 					
 					//fill code this part - end
 					printf("---------------------------------------------\n");
-					
+					sched_getPlace(schedInfo);
+					sched_print(schedInfo);
 					printf("---------------------------------------------\n");
 					
 				}
@@ -153,7 +156,8 @@ int main(int argc, char *argv[]) {
 						
 						//fill code this part - end
 						printf("---------------------------------------------\n");
-					
+					    sched_getType(schedInfo);
+					    sched_printTypes(schedInfo);
 					    printf("---------------------------------------------\n");
 					
 					}
